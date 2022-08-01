@@ -1,16 +1,16 @@
 import React from "react";
 import Link from "next/link";
-const header = () => {
+const Header = () => {
   return (
     <div className="header">
       <Link href="/">
         <h1 style={{"cursor":"pointer"}} className="test">AzubiDistiller</h1>
       </Link>
       <div className="db__links">
-      <Link href="../results">
+      <Link href="../Results">
         <a style={{"cursor":"pointer"}} className="navTitle">Kunden Datenbank</a>
       </Link>
-      <Link href="../results">
+      <Link href="../Results">
         <a style={{"cursor":"pointer"}} className="navTitle">Rating Datenbank</a>
       </Link>
       </div>
@@ -18,4 +18,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

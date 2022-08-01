@@ -23,7 +23,7 @@ const RatingInput = props => {
       "Ratingnote": ratingnote,
       "date": date,
     };
-    axios.post("http://localhost:8080/rating", article).then((response) => {
+    axios.post("https://azubidistiller-backend.herokuapp.com/rating", article).then((response) => {
       console.log(response);
       props.getRequest();
       setKnr(999);

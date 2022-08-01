@@ -9,13 +9,13 @@ import RatingInput from './components/RatingInput';
 export default function Home() {
 
   const getRequest = () => {
-    fetch('http://localhost:8080/kunden/getAll')
+    fetch('https://azubidistiller-backend.herokuapp.com/kunden/getAll')
         .then(response => response.json())
         .then(data => console.log(data))
   }
 
   const getRatingRequest = () => {
-    fetch('http://localhost:8080/rating/getAll')
+    fetch('https://azubidistiller-backend.herokuapp.com/rating/getAll')
     .then(response => response.json())
     .then(data => console.log(data))
   }

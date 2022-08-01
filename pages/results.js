@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Header from "./components/header";
+import Header from "./components/Header";
 
-const results = (props) => {
+const Results = (props) => {
   const [kunden, setKunden] = useState([{}]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/kunden/getAll")
+      .get("https://azubidistiller-backend.herokuapp.com/kunden/getAll")
       .then((data) => setKunden(data.data))
       .then((response) => console.log(response));
   }, []);
@@ -56,4 +56,4 @@ const results = (props) => {
   );
 };
 
-export default results;
+export default Results;

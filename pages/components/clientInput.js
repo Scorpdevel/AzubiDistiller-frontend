@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const clientInput = props => {
+const ClientInput = props => {
   const [name, setName] = useState("");
 
   const postRequest = data => {
     const article = { name: data };
-    axios.post("http://localhost:8080/kunden", article)
+    axios.post("https://azubidistiller-backend.herokuapp.com/kunden", article)
     .then(response =>  {
         console.log(response);
         // props.getRequest();
@@ -56,4 +56,4 @@ const clientInput = props => {
   );
 };
 
-export default clientInput;
+export default ClientInput;
