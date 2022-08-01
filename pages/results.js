@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Header from "./components/Header";
+import Header from "./components/Nav";
 
 const Results = (props) => {
   const [kunden, setKunden] = useState([{}]);
@@ -10,7 +10,8 @@ const Results = (props) => {
     axios
       .get("https://azubidistiller-backend.herokuapp.com/kunden/getAll")
       .then((data) => setKunden(data.data))
-      .then((response) => console.log(response));
+      .then((response) => console.log(response))
+      .catch(err => console.log(err))
   }, []);
 
   return (

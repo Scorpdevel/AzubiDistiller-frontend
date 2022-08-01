@@ -11,8 +11,9 @@ const RatingInput = props => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/kunden/getAll")
-      .then((data) => setKunden(data.data));
+      .get("https://azubidistiller-backend.herokuapp.com/kunden/getAll")
+      .then((data) => setKunden(data.data))
+      .catch(err => console.log(err));
     //   .then((response) => console.log(response);
   }, []);
 
