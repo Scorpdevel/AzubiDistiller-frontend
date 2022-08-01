@@ -28,7 +28,7 @@ const RatingInput = props => {
       console.log(response);
       props.getRequest();
       setKnr(999);
-      setRatingnote(999);
+      setRatingnote(0);
       setRatingverfahren("")
     });
 
