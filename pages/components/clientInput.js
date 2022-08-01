@@ -48,8 +48,9 @@ const ClientInput = props => {
           />
         </div>
         <div className="button__container">
+
           <button className="client__button" onClick={() => postRequest(name)}>
-            Senden
+            Sänden
           </button>
         </div>
       </div>
