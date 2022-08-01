@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-const Header = () => {
+const Nav = () => {
   return (
     <div className="header">
       <Link href="/">
@@ -18,4 +18,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Nav;
