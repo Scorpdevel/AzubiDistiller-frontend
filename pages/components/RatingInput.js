@@ -19,9 +19,9 @@ const RatingInput = props => {
 
   const postRequest = (knr, ratingverfahren, ratingnote, date) => {
     const article = {
-      "Kundennummer": knr,
-      "Ratingverfahren": ratingverfahren,
-      "Ratingnote": ratingnote,
+      "kundennummer": knr,
+      "ratingverfahren": ratingverfahren,
+      "ratingnote": ratingnote,
       "date": date,
     };
     axios.post("https://azubidistiller-backend.herokuapp.com/rating", article).then((response) => {
@@ -77,6 +77,7 @@ const RatingInput = props => {
           onChange={(e) => setRatingnote(parseInt(e.target.value))}
         />
       </div>
+
       <div className="input__field">
         <p className="title">Datum:</p>
         <input
@@ -89,7 +90,7 @@ const RatingInput = props => {
       <div className="button__container">
         <button
           className="client__button"
-          onClick={() => {postRequest(knr,ratingverfahren,ratingnote,date)} }
+          onClick={() => { console.log(knr,ratingverfahren,ratingnote); postRequest(knr,ratingverfahren,ratingnote, date)} }
         >
           Senden
         </button>
@@ -98,5 +99,11 @@ const RatingInput = props => {
   );
 };
 
-//
+
+// {
+//   "Kundennummer": 99,
+//   "Ratingverfahren": "ratingverfahren",
+//   "Ratingnote": 3,
+//   "date": "2022-04-06"
+// }
 export default RatingInput;
