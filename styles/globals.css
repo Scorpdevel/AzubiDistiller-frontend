@@ -15,12 +15,127 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+.header{
+  width: 100vw;
+  padding: 1px;
+  background-color: rgba(239, 251, 248, 1);
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.db__links{
+  flex: 0.5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navTitle{
+  margin-left: 20px;
+  color: rgba(26, 34, 84, 1);
+}
+
+.header > h1{
+  margin: 20px;
+  color: rgba(26, 34, 84, 1);;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+ 
+}
+.input__container{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(239, 251, 248, 1);
+  height: fit-content;
+}
+.input__field{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1;
+  margin-top: 20px;
+}
+
+.title{
+  flex: 1;
+}
+
+.field__input{
+  padding-top: 10px;
+  flex: 1;
+  border: none;
+  border-bottom:1px solid gray  ;
+  padding: 20px;
+}
+
+.client__button{
+  margin-top: 20px;
+
+  width: 200px;
+  font-size: 20px;
+}
+
+.button__container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.choose__field{
+  width: 20vw;
+}
+
+.container__bouth{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  margin-top: 40px;
+  justify-content: space-around;
+}
+
+.table__container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.table{
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+
+}
+
+.table__header{
+  background-color: rgba(239, 251, 248, 1);
+  margin-top: 20px !important;
+  color: black;
+}
+.table__row{
+  display: flex;
+  justify-content: row;
+  flex: 1;
+  margin-top: 5px;
+  border-bottom: 1px solid rgba(239, 251, 248, 1) ;
+}
+
+.table__cell{
+  flex: 1;
+  display: table-column;
+}
+/* @media (prefers-color-scheme: light) {
   html {
     color-scheme: dark;
   }
-  body {
-    color: white;
-    background: black;
-  }
-}
+} */
